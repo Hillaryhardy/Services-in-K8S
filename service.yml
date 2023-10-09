@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: task-appns
+  name: task-app-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: task-app-task-1
+  template:
+    metadata:
+      labels:
+        app: task-app-task-1
+    spec:
+      containers:
+      - name: task-app-task-1
+        image: 'kibet2001/task-app-cicd:v1'
+        ports:
+        - containerPort: 8000
