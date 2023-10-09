@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: task-app-task-1
-        image: 'abhiraj2001/node-todo-app-cicd:v1'
+        image: 'kibet2001/task-app-cicd:v1'
         ports:
         - containerPort: 8000
